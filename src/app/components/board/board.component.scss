@@ -1,0 +1,37 @@
+button{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+            background-color: white;
+            color: black;
+        }
+}
+
+
+.main-board {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border: none;
+}
+
+.board{
+    display: flex;
+}
+
+p{
+    font-size: 25px;
+    text-align: center;
+}
+
+img{
+    height: 25px;
+    width: 25px;
+}

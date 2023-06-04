@@ -1,0 +1,21 @@
+<div class='main-board'>
+    <app-turns [imageUrl]="currentSymbol"></app-turns>
+    <div *ngFor="let rows of boardSize; let x=index">
+
+        <div class="board">
+            <app-tile
+            (valuesToEmit)="changeTheCurrentSymbol($event)"
+            *ngFor="let lines of boardSize;let y=index" [x]="x" [y]="y" [isAWin]="isAWin"></app-tile>
+        </div>
+
+    </div>
+    <div *ngIf="isAWin===true">
+        <p><img [src]="currentSymbol"> won!</p>
+        <button (click)="reset()">New Game</button>
+    </div>
+    <div *ngIf="isATie===true">
+        <p>It's a tie!</p>
+        <button (click)="reset()">New Game</button>
+    </div>
+</div>
+
